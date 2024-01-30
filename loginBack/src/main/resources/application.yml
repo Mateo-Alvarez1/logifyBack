@@ -1,9 +1,8 @@
 Spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/login
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.NonRegisteringDriver
+    url: postgres://fl0user:${sqlPassword}@ep-orange-smoke-a5nqcxq3.us-east-2.aws.neon.fl0.io:5432/logify?sslmode=require
+    username: fl0user
+    password: ${sqlPassword}
   jpa:
     hibernate:
       ddl-auto: create-drop
